@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace FamilyDictionary
@@ -14,13 +15,19 @@ namespace FamilyDictionary
             myFamily.Add("grandmother", new Dictionary<string, string>() { { "name", "Ana" }, { "age", "84" } });
             myFamily.Add("grandfather", new Dictionary<string, string>() { { "name", "Pavel" }, { "age", "92" } });
 
+            //just to test - the following way to initialize the Dictionary items works ... :
+            //myFamily.Add("grandfather", new Dictionary<string, string>() { { "Pavel", "92" } });
+
+
             foreach (var (relation, details) in myFamily)
             {
-                foreach (var (name, age) in details)
+                //string relationDetails = string.Join(",", details);
+                //Console.WriteLine($"{relationDetails} is my {relation} and is {relationDetails} years old.");
+                foreach (var (entry1, entry2) in details)
                 {
-                    Console.WriteLine($"{name} is my {relation} and is {age[2]} years old.");
-
-                    //ANCA - maybe I can find a predicate that cna help me get the values I need at the time I need them ad then use continue to skip that iteration inside the second loop and start again with the first loop???
+                    Console.WriteLine($"{entry1} is my {relation} and is {entry2} years old.");
+                    //var age = entry2;
+                    //Console.WriteLine(string.Join("", age));
                 }
             }
         }

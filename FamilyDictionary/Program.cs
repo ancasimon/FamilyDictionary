@@ -12,8 +12,7 @@ namespace FamilyDictionary
             Dictionary<string, Dictionary<string, string>> myFamily = new Dictionary<string, Dictionary<string, string>>();
             myFamily.Add("oldest brother", new Dictionary<string, string>() { { "name", "Cristian" }, { "age", "51" } });
             myFamily.Add("middle brother", new Dictionary<string, string>() { { "name", "Bogdan" }, { "age", "44" } });
-            myFamily.Add("grandmother", new Dictionary<string, string>() { { "name", "Ana" }, { "age", "84" } });
-            myFamily.Add("grandfather", new Dictionary<string, string>() { { "name", "Pavel" }, { "age", "92" } });
+            myFamily.Add("mother", new Dictionary<string, string>() { { "name", "Maria" }, { "age", "75" } });
 
             //just to test - the following way to initialize the Dictionary items works ... :
             //myFamily.Add("grandfather", new Dictionary<string, string>() { { "Pavel", "92" } });

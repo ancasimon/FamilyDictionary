@@ -18,17 +18,26 @@ namespace FamilyDictionary
             //just to test - the following way to initialize the Dictionary items works ... :
             //myFamily.Add("grandfather", new Dictionary<string, string>() { { "Pavel", "92" } });
 
-
             foreach (var (relation, details) in myFamily)
             {
                 //string relationDetails = string.Join(",", details);
                 //Console.WriteLine($"{relationDetails} is my {relation} and is {relationDetails} years old.");
+                string relativeName = "";
+                string relativeAge = "";
+
                 foreach (var (entry1, entry2) in details)
                 {
-                    Console.WriteLine($"{entry1} is my {relation} and is {entry2} years old.");
-                    //var age = entry2;
-                    //Console.WriteLine(string.Join("", age));
+                    if (entry1 == "name")
+                    {
+                        relativeName = entry2;
+                    }
+                    else if (entry1 == "age")
+                    {
+                        relativeAge = entry2;
+                    }
                 }
+                Console.WriteLine($"{relativeName} is my {relation} and is {relativeAge} years old.");
+
             }
         }
     }
